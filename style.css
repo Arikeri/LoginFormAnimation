@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: #080861;
+}
+#button{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    padding: 10px 20px;
+    color: #1b1a1a;
+    background: #f4f4f8;
+    font-weight: 500;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    filter:drop-shadow(0 0 15px rgba(0,0,0,0.5))
+}
+.login-form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #fdf9f9;
+    border-radius: 5px;
+    background: white;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.login-form a {
+    color: blue;
+    text-decoration: none;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4411d1;
+    color: white;
+    cursor: pointer;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-form .google-btn,
+.login-form .apple-btn {
+    width: 48%; 
+    height: 10%;/* reduced width to account for space between */
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items:flex-start;
+    
+    
+}
+.img{
+    position: relative;
+    right: 110px;
+}
+
+.login-form .google-btn {
+    background-color: silver;
+    color: black;
+    
+}
+
+.login-form .apple-btn {
+    background-color: silver;
+    color: black;
+}
+p{
+  text-align:center;
+}
+h5{
+  text-align:center;
+  gap: 10px;
+}
+.remember{
+    display: flex;
+   position: relative;
+   right: 100px;
+}
+.spark{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    pointer-events: none;
+    background:yellow;
+    z-index: -1;
+    animation: animate 2s linear forwards ;
+}
+.spark:nth-child(even){
+    background: transparent;
+    border: 1px solid #b4afaf;
+}
+@keyframes animate{
+    0%{
+        Opacity: 1;
+        Transform: translate(0,0);
+
+    }
+    100%{
+        Opacity: 0;
+        Transform:translate(var(--x),var(--y)) ;
+    }
+    10%{
+        Opacity: 1;
+        Transform: translate(0,0);
+
+    }
+    150%{
+        Opacity: 0;
+        Transform:translate(var(--x),var(--y)) ;
+    }
+}
